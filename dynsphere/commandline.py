@@ -81,6 +81,7 @@ def parse():
         "resy": ["y resolution of output image", int, 768],
         "world": ["maximum tile z coord", str, "world"],
         "tile-dir": ["directory where the tiles will be put in", str, "tiles"],
+        "type": ["the type of the map", str, "flat"],
         "output;o": ["the output file", str, "sphere.png"],
         
         "silent;s": ["run in silent mode", "store_true"],
@@ -117,6 +118,7 @@ def parse():
     Settings.output = args.output
     Settings.resx = args.resx
     Settings.resy = args.resy
+    Settings.type = args.type
     
     logger.setup_logger()
 

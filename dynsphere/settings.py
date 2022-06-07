@@ -21,6 +21,8 @@ class Settings:
     resx: int
     resy: int
     
+    type: str
+    
     base_url: str
     tile_dir: str
     world: str

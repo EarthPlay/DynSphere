@@ -58,7 +58,7 @@ def collect_tile(tx: int, tz: int) -> Image.Image:
     if os.path.isfile(filename):
         logging.debug("Using already existing version of tile at §o%s§R.", filename)
     else:
-        url = f"{Settings.base_url}tiles/{Settings.world}/flat/6_1/zzzzz_{rtx}_{rtz}.jpg"
+        url = f"{Settings.base_url}tiles/{Settings.world}/{Settings.type}/6_1/zzzzz_{rtx}_{rtz}.jpg"
         logging.debug("Downloading from §o%s§R...", url)
         res = requests.get(url)
         with open(filename, "wb") as f:
