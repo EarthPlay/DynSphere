@@ -30,7 +30,13 @@ def generate():
             boxz = (tile_count_z - (tz - Settings.mintz) - 1) * Settings.tile_image_height
             logging.debug("Adding tile to image at §o%s§R §o%s§R...", boxx, boxz)
             image.paste(other, box=(boxx, boxz))
+            other.close()
 
+    full_location = f"{Settings.tile_dir}/full.jpg"
+    
+    logging.info("Saving full map to §o%s§R", full_location)
+    image.save(full_location)
+    
     logging.info("Generating spherical image")
     sphere = image_on_sphere(image, math.radians(-90),
                              math.radians(-90), math.radians(0),
@@ -38,11 +44,10 @@ def generate():
     
     logging.info("Saving sphere to §o%s§R", Settings.output)
     sphere.save(Settings.output)
-
-    full_location = f"{Settings.tile_dir}/full.jpg"
     
-    logging.info("Saving full map to §o%s§R", full_location)
-    image.save(full_location)
+    image.close()
+    sphere.close()
+
             
     
 
