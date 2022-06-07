@@ -1,0 +1,17 @@
+{
+    "fileHeaderComment.parameter": {
+		"*": {
+			"commentbegin": "",
+			"commentprefix": "#",
+			"commentend": " ",
+			"company": "EarthPlay"
+		}
+	},
+	"fileHeaderComment.template": {
+		"*": [
+			"${commentprefix} Created on ${date}",
+			"${commentprefix}",
+			"${commentprefix} Copyright (c) ${year} ${company}"
+		]
+	}
+}
