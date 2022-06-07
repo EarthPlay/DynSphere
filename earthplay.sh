@@ -3,4 +3,4 @@
 # Copyright (c) 2022 EarthPlay
 
 # Sample command for creating the sphere
-python3 dynsphere/ -b https://dynmap.earthplay.de/ --mintz -11 --maxtz 12 --mintx -24 --maxtx 23 --level 100 --resx 2048 --resy 2048
+python3 dynsphere/ -b https://dynmap.earthplay.de/ --mintz -11 --maxtz 12 --mintx -24 --maxtx 23 --resx 2048 --resy 2048

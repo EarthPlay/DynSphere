@@ -31,13 +31,18 @@ def generate():
             logging.debug("Adding tile to image at §o%s§R §o%s§R...", boxx, boxz)
             image.paste(other, box=(boxx, boxz))
 
+    logging.info("Generating spherical image")
     sphere = image_on_sphere(image, math.radians(-90),
                              math.radians(-90), math.radians(0),
                              Settings.resx, Settings.resy)
     
+    logging.info("Saving sphere to §o%s§R", Settings.output)
     sphere.save(Settings.output)
 
-    image.save(f"{Settings.tile_dir}/full.jpg")
+    full_location = f"{Settings.tile_dir}/full.jpg"
+    
+    logging.info("Saving full map to §o%s§R", full_location)
+    image.save(full_location)
             
     
 
