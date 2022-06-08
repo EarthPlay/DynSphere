@@ -79,8 +79,11 @@ def parse():
         "maxtz": ["maximum tile z coord", int, 10],
         "resx": ["x resolution of output image", int, 768],
         "resy": ["y resolution of output image", int, 768],
-        "world": ["maximum tile z coord", str, "world"],
+        "world": ["the world that will be downloaded", str, "world"],
         "tile-dir": ["directory where the tiles will be put in", str, "tiles"],
+        "tile-type": ["the tile type", str, "zzzzz_"],
+        "tile-w": ["step size x", int, 32],
+        "tile-h": ["step size z", int, 32],
         "type": ["the type of the map", str, "flat"],
         "output;o": ["the output file", str, "sphere.png"],
         
@@ -119,6 +122,9 @@ def parse():
     Settings.resx = args.resx
     Settings.resy = args.resy
     Settings.type = args.type
+    Settings.tile_type = args.tile_type
+    Settings.tile_width = args.tile_w
+    Settings.tile_height = args.tile_h
     
     logger.setup_logger()
 

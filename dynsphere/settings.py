@@ -10,11 +10,13 @@ class Settings:
     license = "MIT"
     year = "2022"
     
-    tile_width: int = 32
-    tile_height: int = 32
+    tile_width: int = 16
+    tile_height: int = 16
     
     tile_image_width: int = 128
     tile_image_height: int = 128
+    
+    tile_type: str
     
     output: str
     

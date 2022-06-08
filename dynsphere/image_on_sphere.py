@@ -22,7 +22,8 @@ def image_on_sphere(imageInput: Image, xy: float, xz: float, yz: float,
     xc = (imgxOutput - 1.0) / 2
     yc = (imgyOutput - 1.0) / 2
     zc = min((imgxOutput - 1.0), (imgyOutput - 1.0)) / 2
-    r = min((imgxOutput - 1.0), (imgyOutput - 1.0)) / 2
+    # r = min((imgxOutput - 1.0), (imgyOutput - 1.0)) / 2
+    r = min((imgxOutput - 1.0), (imgyOutput - 1.0)) * 0.6709
     # define eye point
     xo = (imgxOutput - 1.0) / 2
     yo = (imgyOutput - 1.0) / 2
